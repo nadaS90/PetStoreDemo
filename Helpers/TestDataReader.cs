@@ -30,19 +30,19 @@ public static Dictionary<string, string> DynamicVariables = new Dictionary<strin
 
         public static string ReplaceVariables(string fileContent)
         {
-            var variablesToReplace = new Dictionary<string, string>
-            {
-                {"{{name}}", Faker.Name.First() },
-                {"{{username}}", Faker.Internet.UserName() + Faker.Name.First() },
-                {"{{lastname}}", Faker.Name.Last() },
-                {"{{email}}", Faker.Internet.Email() },
-                {"{{phone}}", Faker.Phone.Number() }
-            };
+            //var variablesToReplace = new Dictionary<string, string>
+            //{
+            //    {"{{name}}", Faker.Name.First() },
+            //    {"{{username}}", Faker.Internet.UserName() + Faker.Name.First() },
+            //    {"{{lastname}}", Faker.Name.Last() },
+            //    {"{{email}}", Faker.Internet.Email() },
+            //    {"{{phone}}", Faker.Phone.Number() }
+            //};
 
-            foreach (var variable in variablesToReplace)
-            {
-                fileContent = fileContent.Replace(variable.Key, variable.Value);
-            }
+            //foreach (var variable in variablesToReplace)
+            //{
+            //    fileContent = fileContent.Replace(variable.Key, variable.Value);
+            //}
 
             foreach (var dynamicVariable in DynamicVariables)
             {

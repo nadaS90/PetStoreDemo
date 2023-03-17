@@ -8,7 +8,7 @@ namespace PetStoreDemo.dto.Pet
 {
     public class PetDto
     {
-        public int? Id { get; set; }
+        public Int64? Id { get; set; }
         public PetCategoryDto Category { get; set; }
         public IList<TagDto> Tags { get; set; }
         public IList<string> PhotoUrls { get; set; }

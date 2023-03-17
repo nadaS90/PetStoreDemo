@@ -28,7 +28,7 @@ namespace PetStoreDemo.Configuration
             var enviroment = Environment.GetEnvironmentVariable("ENV_NAME");
             if (enviroment == null)
             {
-                enviroment = Config.DefaultEnviroment;
+                enviroment = Config.BaseEnviroment;
             }
             CurrentEnviromentName = enviroment;
             CurrentEnviroment = Config.Enviroments[CurrentEnviromentName];

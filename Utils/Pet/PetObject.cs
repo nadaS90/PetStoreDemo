@@ -14,7 +14,7 @@ namespace PetStoreDemo.Utils.Pet
 {
     public class PetObject
     { 
-        public int? Id { get; set; }
+        public Int64? Id { get; set; }
         public PetCategoryDto Category { get; set; }
         public string Name { get; set; }
         public IList<string> PhotoUrls { get; set; }

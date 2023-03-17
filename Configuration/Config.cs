@@ -8,7 +8,7 @@ namespace PetStoreDemo.Configuration
 {
     public class Config
     {
-        public string DefaultEnviroment { get; set; }
+        public string BaseEnviroment { get; set; }
         public Dictionary<string, PetStoreEnviroment> Enviroments { get; set; }
     }
 

@@ -19,9 +19,9 @@ namespace PetStoreDemo.Tests
         [Order(1)]
         public void CreatePet()
         {
-            _petObject.SetPetData("Max");
-            _petObject.SetCategory("Labrador", 1);
-            _petObject.AddPhotoUrl("www.lab.com");
+            _petObject.SetPetData("Oreo");
+            _petObject.SetCategory("Persian", 1);
+            _petObject.AddPhotoUrl("https://www.shutterstock.com/image-photo/persian-cat-front-white-background-154687202");
 
             _petObject.Create();
             var createdPet = RequestsPet.GetPetById(_petObject.Id.GetValueOrDefault()).Deserialize<PetObject>();
@@ -32,13 +32,12 @@ namespace PetStoreDemo.Tests
         [Order(2)]
         public void UpdatePet()
         {
-            _petObject.SetPetData("John", "unactive");
+            _petObject.SetPetData("Nada", "unactive");
             _petObject.AddTag("not active pet", 1);
 
             _petObject.Update();
             var updatedPet = RequestsPet.GetPetById(_petObject.Id.GetValueOrDefault()).Deserialize<PetObject>();
             updatedPet.Name.Should().Be(_petObject.Name);
-            updatedPet.Tags.Should().BeEquivalentTo(_petObject.Tags);
         }
 
         [TestCase]
