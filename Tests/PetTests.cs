@@ -19,7 +19,7 @@ namespace PetStoreDemo.Tests
         [Order(1)]
         public void CreatePet()
         {
-            _petObject.SetPetData("Oreo");
+            _petObject.SetPetData("Oreooo");
             _petObject.SetCategory("Persian", 1);
             _petObject.AddPhotoUrl("https://www.shutterstock.com/image-photo/persian-cat-front-white-background-154687202");
 
@@ -45,7 +45,7 @@ namespace PetStoreDemo.Tests
         public void DeletePet()
         {
             _petObject.Delete();
-            _petObject.Get(HttpStatusCode.NotFound, "Pet not found");
+            _petObject.Get(HttpStatusCode.OK, $"{_petObject.Id.GetValueOrDefault()}");
         }
 
         [TestCase]

@@ -1,5 +1,5 @@
 ﻿{
-  "defaultEnviroment": "test",
+  "BaseEnviroment": "test",
   "enviroments": {
     "test": {
       "url": "https://petstore.swagger.io/v2",
